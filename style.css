@@ -1,28 +1,18 @@
 
 body {
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(to bottom, #3a007d, #1c0036);
+    color: gold;
     font-family: sans-serif;
-}
-#background {
-    background: url('bg.jpg') center center / cover no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tor-side {
-    background: url('tor.png') center center / contain no-repeat;
-    width: 200px;
-    height: 400px;
-    margin-right: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 #game-area {
-    background: rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    margin: auto;
+    background: #00000055;
     padding: 20px;
     border-radius: 10px;
-    color: gold;
-    text-align: center;
 }
 #grid {
     display: grid;
@@ -41,8 +31,7 @@ body {
     justify-content: center;
     font-weight: bold;
     border-radius: 5px;
-    font-size: 28px;
-    transition: transform 0.3s ease;
+    font-size: 24px;
 }
 button {
     margin: 5px;

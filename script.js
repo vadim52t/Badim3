@@ -17,19 +17,10 @@ function generateGrid() {
     }
 }
 
-function playSound(id) {
-    const sound = document.getElementById(id);
-    if (sound) {
-        sound.currentTime = 0;
-        sound.play();
-    }
-}
-
 function spin() {
     let bet = parseInt(document.getElementById("bet").value) || 100;
     if (balance < bet) return alert("Недостаточно монет!");
 
-    playSound("spinSound");
     generateGrid();
     let matched = Math.floor(Math.random() * 3) + 8;
     win = matched * bet;
@@ -38,13 +29,11 @@ function spin() {
     document.getElementById("balance").textContent = balance;
     document.getElementById("win").textContent = win;
 
-    if (win > 0) playSound("winSound");
-
     if (inBonus) {
         totalBonusWin += win;
         bonusSpinsLeft--;
         if (bonusSpinsLeft > 0) {
-            setTimeout(spin, 800);
+            setTimeout(spin, 1000);
         } else {
             alert("Бонус завершён! Выигрыш: " + totalBonusWin);
             inBonus = false;
