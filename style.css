@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#background {
+    background: url('bg.jpg') center center / cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tor-side {
+    background: url('tor.png') center center / contain no-repeat;
+    width: 200px;
+    height: 400px;
+    margin-right: 20px;
+}
+#game-area {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: gold;
+    text-align: center;
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #fff2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    color: #3a007d;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
